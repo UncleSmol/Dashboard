@@ -136,7 +136,7 @@ object {
 
 /* Utility classes */
 .section-break {
-	width: 98%;
+	width: 90%;
 	height: 5px;
 	background-color: var(--section-break-color);
 	margin: var(--spacing-medium) auto;
