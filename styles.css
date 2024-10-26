@@ -1,0 +1,244 @@
+:root {
+	--font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto',
+		'Oxygen', 'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue',
+		sans-serif;
+	--background-color: rgb(0, 0, 0);
+	--text-color: #5a5a5a;
+	--white: #fff;
+	--section-background: #000000a3;
+	--border-color: #000;
+	--section-break-color: #000000;
+	--selection-background: #000000;
+
+	--spacing-small: 5pt;
+	--spacing-medium: 8pt;
+	--spacing-large: 10pt;
+
+	--font-size-small: 8pt;
+	--font-size-medium: 10pt;
+	--font-size-large: 14pt;
+	--font-size-xlarge: 18pt;
+	--font-size-xxlarge: 20pt;
+
+	--border-radius: 20px;
+	--max-width: 1080px;
+}
+
+/* Box sizing and reset */
+*,
+*::before,
+*::after {
+	box-sizing: border-box;
+	margin: 0;
+	padding: 0;
+}
+
+/* Base styles */
+html {
+	font-size: var(--font-size-medium);
+	-webkit-text-size-adjust: 100%;
+	text-size-adjust: 100%;
+	scrollbar-width: none; /* Firefox */
+	-ms-overflow-style: none; /* Internet Explorer 10+ */
+}
+
+html::-webkit-scrollbar {
+	width: 0;
+	height: 0;
+	display: none; /* Chrome, Safari, Opera */
+}
+
+body {
+	font-family: var(--font-family);
+	line-height: 1.2;
+	-webkit-font-smoothing: antialiased;
+	-moz-osx-font-smoothing: grayscale;
+	background: #ffefba;
+	background: -webkit-linear-gradient(to bottom, #ffffff, #ffefba);
+	background: linear-gradient(
+		to bottom,
+		#ffffff,
+		#ffefba
+	); /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
+	width: 100%;
+	height: 100vh; /* Use viewport height instead of percentage */
+	overflow-y: scroll; /* Allow vertical scrolling */
+	overflow-x: hidden; /* Hide horizontal scrollbar */
+	color: var(--text-color);
+}
+
+/* Typography */
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+	font-weight: bold;
+	margin: var(--spacing-medium) var(--spacing-small);
+}
+
+p {
+	margin: 0 var(--spacing-small) var(--spacing-medium) var(--spacing-medium);
+}
+
+ul,
+ol {
+	margin: 0 var(--spacing-medium) var(--spacing-medium) 40px;
+}
+
+li {
+	list-style-type: disc;
+	font-size: var(--font-size-small);
+}
+
+/* Links and Buttons */
+a,
+button,
+input[type='button'],
+input[type='reset'],
+input[type='submit'] {
+	color: inherit;
+	text-decoration: none;
+	background-color: transparent;
+	border: none;
+	cursor: pointer;
+	font-family: inherit;
+	font-size: 100%;
+	line-height: inherit;
+	padding: 0;
+}
+
+/* Form elements */
+input,
+textarea,
+select {
+	font-family: inherit;
+	font-size: 100%;
+	line-height: inherit;
+	margin: 0;
+	padding: 0;
+}
+
+/* Media elements */
+img,
+svg,
+video,
+canvas,
+audio,
+iframe,
+embed,
+object {
+	display: block;
+	max-width: 100%;
+	height: auto;
+}
+
+/* Utility classes */
+.section-break {
+	width: 98%;
+	height: 5px;
+	background-color: var(--section-break-color);
+	margin: var(--spacing-medium) auto;
+	border-radius: var(--border-radius);
+	box-shadow: 5px 5px 5px 0px rgb(90, 90, 90);
+}
+
+/* Header styles */
+header {
+	height: 15vh;
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	background-color: var(--white);
+	overflow: hidden;
+}
+
+#logo {
+	max-width: 450px;
+	width: 100%;
+	height: 100%;
+	display: flex;
+	justify-content: center;
+	align-items: center;
+}
+
+#logo img {
+	max-width: 100%;
+	max-height: 100%;
+	object-fit: contain;
+}
+
+/* section styles */
+
+section {
+	width: 90vw;
+	margin: 0 auto;
+}
+
+#welcome-section h1 {
+	text-align: center;
+}
+
+#manuals-list {
+	display: none;
+}
+
+.service-type-container {
+	border: 1px rgb(0, 0, 0) solid;
+	background-color: #ffffff;
+	width: 90vw;
+	margin: 10px auto;
+	cursor: pointer;
+	-webkit-border-radius: 10px;
+	-moz-border-radius: 10px;
+	-ms-border-radius: 10px;
+	-o-border-radius: 10px;
+	border-radius: 10px;
+	box-shadow: 5px 5px 5px 0px rgb(90, 90, 90);
+	-webkit-transition: all 0.5s ease;
+	-moz-transition: all 0.5s ease;
+	-ms-transition: all 0.5s ease;
+	-o-transition: all 0.5s ease;
+	transition: all 0.5s ease;
+}
+
+.service-type-container:hover {
+	background-color: #000000;
+	color: white;
+	-webkit-transition: all 0.5s ease;
+	-moz-transition: all 0.5s ease;
+	-ms-transition: all 0.5s ease;
+	-o-transition: all 0.5s ease;
+	transition: all 0.5s ease;
+}
+
+.notification{
+	width:100%;
+	display: flex;
+	gap: 8px;
+	padding:0 10vw;
+}
+
+.notification h1, .notification p{
+	font-size: 9pt;
+	margin: 0;
+}
+
+.notification h1{
+	color: green;
+}
+
+#page-404-container p{
+		text-align: center;
+		font-style: italic;
+		color: #5a5a5a6d;
+	}
+
+
+
+@media screen and (max-width: 480px) {
+	#page-404-container p{
+		font-size: 8pt;
+	}
+}
