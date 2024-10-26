@@ -65,6 +65,7 @@ body {
 	overflow-y: scroll; /* Allow vertical scrolling */
 	overflow-x: hidden; /* Hide horizontal scrollbar */
 	color: var(--text-color);
+	position: relative;
 }
 
 /* Typography */
@@ -215,9 +216,9 @@ section {
 
 .notification{
 	width:100%;
-	display: flex;
 	gap: 8px;
 	padding:0 10vw;
+	display: none;
 }
 
 .notification h1, .notification p{
@@ -227,6 +228,7 @@ section {
 
 .notification h1{
 	color: green;
+	
 }
 
 #page-404-container p{
@@ -235,13 +237,92 @@ section {
 		color: #5a5a5a6d;
 	}
 
+	.loader{
+		position: absolute;
+		width:max-content;
+		height:20px;
+		left: 50%;
+		top: 70%;
+		-webkit-transform: translate(-50%, -50%);
+		-moz-transform: translate(-50%, -50%);
+		-ms-transform: translate(-50%, -50%);
+		-o-transform: translate(-50%, -50%);
+		transform: translate(-50%, -50%);
+		display: flex;
+		flex-direction: row;
+		justify-content: space-around;
+		align-items: center;
+		gap: 2px;
+}
+
+.loader-ball{
+	height: 8pt;
+	width: 8pt;
+	border-radius: 50%;
+	background-color: #b32a2a65;
+}
+
+.loader-ball:nth-child(1) { /* Target the left ball */
+  animation: leftBallAnimation 2s infinite ease-in-out;
+}
+
+.loader-ball:nth-child(3) { /* Target the right ball */
+  animation: rightBallAnimation 2s infinite ease-in-out;
+}
+
+@keyframes loaderAnimation {
+  0% { transform: rotate(0deg); } /* Optional: Rotate the entire loader */
+  100% { transform: rotate(360deg); }
+}
+
+@keyframes leftBallAnimation {
+  0%, 100% { transform: translateX(0); }
+  50% { transform: translateX(-10px); }
+}
+
+@keyframes rightBallAnimation {
+  0%, 100% { transform: translateX(0); }
+  50% { transform: translateX(10px); }
+}
 
 
 @media screen and (max-width: 480px) {
+
+.service-type-container{
+	height: 25pt;
+	
+}
+
+.service-type-container h2{
+	font-size: 12pt;
+	margin: 4pt 2pt;
+}
+
 	#page-404-container p{
 		font-size: 8pt;
 	}
 
 	.section-break {
 		height: 1.5px;
-}}
+	}
+
+	ul li{
+		font-size: 12pt;
+		line-height: 1.5;
+		-webkit-transition: all 0.5s ease;
+		-moz-transition: all 0.5s ease;
+		-ms-transition: all 0.5s ease;
+		-o-transition: all 0.5s ease;
+		transition: all 0.5s ease;
+}
+
+	ul li:hover{
+		transform: translateX(3pt);
+		-webkit-transform: translateX(3pt);
+		-moz-transform: translateX(3pt);
+		-ms-transform: translateX(3pt);
+		-o-transform: translateX(3pt);
+}
+
+}
+
