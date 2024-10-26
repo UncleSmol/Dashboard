@@ -260,6 +260,9 @@ section {
 	width: 8pt;
 	border-radius: 50%;
 	background-color: #b32a2a65;
+	box-shadow: 5px 5px 5px 0px rgb(0, 0, 0);
+	-webkit-animation: loaderAnimation 2s infinite ease-in-out;
+	animation: loaderAnimation 2s infinite ease-in-out;
 }
 
 .loader-ball:nth-child(1) { /* Target the left ball */
