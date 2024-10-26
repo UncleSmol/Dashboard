@@ -241,4 +241,7 @@ section {
 	#page-404-container p{
 		font-size: 8pt;
 	}
-}
+
+	.section-break {
+		height: 1.5px;
+}}
